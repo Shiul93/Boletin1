@@ -18,7 +18,9 @@ public class Mazo {
        Collections.shuffle(baraja.baraja);
         this.mazo=baraja.baraja;
     }
-    public void añadirCarta(Mazo mazo){
+    public void añadirCarta(Mazo mazo,Carta carta){
+        
+        this.mazo.add(carta);
         
     }
 
