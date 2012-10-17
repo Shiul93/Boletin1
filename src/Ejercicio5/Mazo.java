@@ -21,7 +21,7 @@ public class Mazo {
     public void añadirCarta(Mazo mazo,Carta carta){
         
         this.mazo.add(carta);
-        
+   
     }
 
 }
