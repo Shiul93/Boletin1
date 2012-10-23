@@ -60,7 +60,7 @@ public class Barometro {
            
            Barometro comparacion=(Barometro)barometro;
            
-           if (this.presion==comparacion.presion)
+           if ((Math.abs(this.presion-comparacion.presion))<0.0000000001)
            {return true;}
            else
            {return false;}
