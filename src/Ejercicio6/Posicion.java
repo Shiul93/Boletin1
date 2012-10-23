@@ -8,8 +8,6 @@ package Ejercicio6;
  *
  * @author Luis
  */
-public class Tablero {
-    
-     Pieza[][] tablero;
+public class Posicion {
     
 }

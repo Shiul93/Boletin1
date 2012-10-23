@@ -9,5 +9,8 @@ package Ejercicio6;
  * @author Luis
  */
 public class Pieza {
-    
+  public enum TipoPieza{peon,torre,caballo,alfil,dama,rey}; 
+  public enum Color{blanco, negro};
+  TipoPieza tipo;
+  Color color;
 }
