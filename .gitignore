@@ -171,5 +171,5 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
-*.xml
-*.properties
+#*.xml
+#*.properties
