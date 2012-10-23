@@ -32,8 +32,8 @@ public class Baraja {
    }
    public Mazo barajar(){
       Mazo mazo;
-      
-        mazo = new Mazo( (Baraja)this);
+        
+        mazo = new Mazo(this);
         
         return mazo;
                   }
