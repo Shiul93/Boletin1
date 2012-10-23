@@ -6,14 +6,14 @@ package ejercicio1;
  */
  public  class UtilidadesString {
     
-    static public int  longitud(String cadena){
+    static public int  longitud(String cadena){ //Devuelve la longitud de una cadena
         
         int longitud = cadena.length();
         return longitud;
         
     }
     
-    static public int  contar(String cadena , char caracter){
+    static public int  contar(String cadena , char caracter){//Devuelve el numero de caracteres de una cadena
         
         int encontrados = 0;
         
@@ -41,7 +41,7 @@ package ejercicio1;
         return(encontrados);
     }
     
-    static public int  contarVocales(String cadena)
+    static public int  contarVocales(String cadena)//Cuenta las vocales de una cadena
     {
     int contador=0;
     int contadorVocales=0;

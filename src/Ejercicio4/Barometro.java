@@ -21,7 +21,7 @@ public class Barometro {
         }
         
         
-    }
+    }//Metodos que devuelven la presion de un barometro en diferentes unidades
      private float getPascales(){
        
         return this.presion;
@@ -35,7 +35,7 @@ public class Barometro {
     private float getAtmosfera(){
         return (this.presion/101325);
     }
-   
+    //Metodos que fijan la presion de un barometro en diferentes unidades
     private void setPascales(float presion){
         this.presion=presion;
     }
@@ -53,7 +53,7 @@ public class Barometro {
     return "La presion actual es de "+this.presion+" pascales"    ;
 }
    @Override
-   public boolean equals(Object barometro){
+   public boolean equals(Object barometro){ //Compara dos barometros por sus respectivas presiones
        
        if (barometro==null){return false;}
        if (barometro.getClass()==Barometro.class){

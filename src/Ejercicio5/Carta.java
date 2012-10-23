@@ -15,10 +15,10 @@ public class Carta {
        this.numero=numero;
        this.palo=palo;
    }
-   public Palo getPalo(Carta carta){
+   public Palo getPalo(Carta carta){//devuelve el palo de una carta dada
        return carta.palo;
    }
-   public int getNumero(Carta carta){
+   public int getNumero(Carta carta){//devuelve el numero de una carta dada
        return carta.numero;
    }
 

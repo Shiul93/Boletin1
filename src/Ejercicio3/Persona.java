@@ -15,7 +15,7 @@ public class Persona {
  
  public static final String NIF_STRING_ASOCIATION = "TRWAGMYFPDXBNJZSQVHLCKE";
  
- public static char letraDNI(int dni)
+ public static char letraDNI(int dni) //Devuelve la Letra de un DNI (integer) dado
   {
      char letra =(String.valueOf(dni) + NIF_STRING_ASOCIATION.charAt(dni % 23)).charAt(8);
       
@@ -52,11 +52,11 @@ public Persona(String dni,String nombre) //Metodo Constructor
     }
 }
 @Override
-public String toString()
+public String toString() 
 {
     return "A la persona de nombre "+nombre+" le corresponde el DNI: "+DNI    ;
 }
-public static String dni(Persona pers)
+public static String dni(Persona pers)//Devuelve el dni de una persona con letra.
 {
     return (pers.DNI);
 }

@@ -27,10 +27,10 @@ public class Baraja {
         }  
       }
    }
-   public Carta getCarta(int i){
+   public Carta getCarta(int i){ //Devuelve una carta de la baraja
    return this.baraja.get(i)   ;
    }
-   public Mazo barajar(){
+   public Mazo barajar(){//Copia la baraja en un mazo, lo mezcla y devuelve el mismo
       Mazo mazo;
         
         mazo = new Mazo(this);
