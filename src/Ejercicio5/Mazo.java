@@ -1,9 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package Ejercicio5;
 
+package Ejercicio5;
 import java.util.*;
 
 
@@ -15,13 +11,9 @@ public class Mazo {
     List<Carta> mazo=new ArrayList<Carta>(); 
     
     public Mazo(Baraja baraja){
-       Collections.shuffle(baraja.baraja);
-        this.mazo=baraja.baraja;
+       this.mazo=baraja.barajar().mazo;
+    
+    
     }
-    public void añadirCarta(Mazo mazo,Carta carta){
-        
-        this.mazo.add(carta);
-   
-    }
-
+ 
 }

@@ -14,7 +14,7 @@ import static java.lang.System.*;
 public class Baraja {
 
 
-    List<Carta> baraja=new ArrayList<Carta>(); 
+   private final List<Carta> baraja=new ArrayList<Carta>(); 
    public Baraja(){
      
  
@@ -32,6 +32,7 @@ public class Baraja {
    }
    public Mazo barajar(){
       Mazo mazo;
+      
         mazo = new Mazo( (Baraja)this);
         
         return mazo;
