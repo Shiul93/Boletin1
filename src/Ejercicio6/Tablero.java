@@ -11,5 +11,12 @@ package Ejercicio6;
 public class Tablero {
     
      Pieza[][] tablero;
-    
+     
+     public void iniciarPartida(Tablero tablero)
+     {
+     
+     
+     
+     }
+ 
 }
