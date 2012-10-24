@@ -10,7 +10,11 @@ package Ejercicio6;
  */
 public class Pieza {
   public enum TipoPieza{peon,torre,caballo,alfil,dama,rey}; 
-  public enum Color{blanco, negro};
+  public enum ColorPieza{blanco, negro};
   TipoPieza tipo;
-  Color color;
+  ColorPieza color;
+  public Pieza(TipoPieza tipo,ColorPieza color){
+   this.color=color;
+   this.tipo=tipo;
+  }
 }
