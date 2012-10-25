@@ -40,7 +40,7 @@ public class Tablero {
      this.tablero[6][0]= new Pieza (TipoPieza.caballo,ColorPieza.blanco);
      this.tablero[7][0]= new Pieza (TipoPieza.torre,ColorPieza.blanco);
      
-     for (int i = 0; i == 7; i++) {
+     for (int i = 0; i <= 7; i++) {
          
         this.tablero[i][1]= new Pieza (TipoPieza.peon,ColorPieza.blanco);
              
@@ -55,7 +55,7 @@ public class Tablero {
              
          }
      
-     for (int i = 0; i == 7; i++) {
+     for (int i = 0; i <= 7; i++) {
          
         this.tablero[i][6]= new Pieza (TipoPieza.peon,ColorPieza.negro);
              
@@ -69,40 +69,136 @@ public class Tablero {
      this.tablero[6][7]= new Pieza (TipoPieza.caballo,ColorPieza.negro);
      this.tablero[7][7]= new Pieza (TipoPieza.torre,ColorPieza.negro);
      }
+     
+  public void mover(Posicion posOr,Posicion posDes)   {
+      
+      
+      
+      
+      
+  }
+  
+  public int xToInt(Posicion.coorX coor){
+      int entero=0;
+      switch (coor){
+       
+          case a:
+              
+              entero=0;
+              break;    
+          case b:
+              
+              entero=1;
+              break;
+          case c:
+              
+              entero=2;
+              break;
+          case d:
+              
+              entero=3;
+              break;
+          case e:
+              
+              entero=4;
+              break;
+              
+          case f:
+              
+              entero=5;
+              break;
+
+          case g:
+              
+              entero=6; 
+              break;
+          case h:
+              
+              entero=7;
+              break;
+              
+      }
+      return entero;
+  }
+  
+  public Posicion.coorX intToX(int coor){
+      Posicion.coorX pos=Posicion.coorX.a;
+      
+      switch (coor){
+       
+          case 0:
+              
+              pos=Posicion.coorX.a;
+              break;    
+          case 1:
+              
+              pos=Posicion.coorX.b;
+              break;
+          case 2:
+              
+              pos=Posicion.coorX.c;
+              break;
+          case 3:
+              
+              pos=Posicion.coorX.d;
+              break;
+          case 4:
+              
+              pos=Posicion.coorX.e;
+              break;
+              
+          case 5:
+              
+              pos=Posicion.coorX.f;
+              break;
+
+          case 6:
+              
+              pos=Posicion.coorX.g; 
+              break;
+          case 7:
+              
+              pos=Posicion.coorX.h;
+              break;
+      }
+    return pos;  
+  } 
+  
+  
  @Override
  public String toString(){
      
  String datos="";
  
-    int contador=0;
+    int contador=1;
     
-     for (int y = 7; y == 0; y--)
+     for (int y = 7; y >= 0; y--)
      {
                  
-         for (int x = 0; x < 8; x++) 
+         for (int x = 0; x <=7; x++) 
          
          {
          
-             if (tablero[x][y]==null)
+             if ((tablero[x][y]==null)&&(x<7))
             {
              contador++ ;   
                  
             }
              else{
                  
-                 if (contador !=0){
+                 if (contador !=1){
                      
                      datos=datos+contador;
-                     contador=0;
+                     contador=1;
                  }
                  else{
                      datos=datos+tipoPieza(tablero[x][y]);
                  }
                  
              }
-          datos=datos+"/";                   
+                        
          }
-         
+       datos=datos+"/";       
      }
  
  return datos;

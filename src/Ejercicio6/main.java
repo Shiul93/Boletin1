@@ -12,7 +12,12 @@ public class main {
   public static void main  (String[] args){
       String cosicas;
       Tablero tablero=new Tablero();
+      
+      cosicas=tablero.toString();
+      System.out.println(cosicas);
+      
       tablero.iniciarPartida();
+    
       cosicas=tablero.toString();
       System.out.println(cosicas);
   }   
