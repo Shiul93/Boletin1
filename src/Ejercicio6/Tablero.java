@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package Ejercicio6;
+import java.util.*;
 import Ejercicio6.Pieza.ColorPieza;
 import Ejercicio6.Pieza.TipoPieza;
 /**
@@ -72,97 +73,25 @@ public class Tablero {
      
   public void mover(Posicion posOr,Posicion posDes)   {
       
-      
-      
-      
+     
+     
+     
+     
+     if (this.tablero[posOr.getCoordenadaX()][posOr.getCoordenadaY()]==null){
+         
+          throw new IllegalArgumentException();
+     }
+     else{
+      this.tablero[posDes.getCoordenadaX()] [posDes.getCoordenadaY()]=this.tablero[posOr.getCoordenadaX()][posOr.getCoordenadaY()];
+      this.tablero[posOr.getCoordenadaX()][posOr.getCoordenadaY()]=null;
+         System.out.println("");         
+     }
+              
       
   }
-  
-  public int xToInt(Posicion.coorX coor){
-      int entero=0;
-      switch (coor){
-       
-          case a:
-              
-              entero=0;
-              break;    
-          case b:
-              
-              entero=1;
-              break;
-          case c:
-              
-              entero=2;
-              break;
-          case d:
-              
-              entero=3;
-              break;
-          case e:
-              
-              entero=4;
-              break;
-              
-          case f:
-              
-              entero=5;
-              break;
 
-          case g:
-              
-              entero=6; 
-              break;
-          case h:
-              
-              entero=7;
-              break;
-              
-      }
-      return entero;
-  }
   
-  public Posicion.coorX intToX(int coor){
-      Posicion.coorX pos=Posicion.coorX.a;
-      
-      switch (coor){
-       
-          case 0:
-              
-              pos=Posicion.coorX.a;
-              break;    
-          case 1:
-              
-              pos=Posicion.coorX.b;
-              break;
-          case 2:
-              
-              pos=Posicion.coorX.c;
-              break;
-          case 3:
-              
-              pos=Posicion.coorX.d;
-              break;
-          case 4:
-              
-              pos=Posicion.coorX.e;
-              break;
-              
-          case 5:
-              
-              pos=Posicion.coorX.f;
-              break;
 
-          case 6:
-              
-              pos=Posicion.coorX.g; 
-              break;
-          case 7:
-              
-              pos=Posicion.coorX.h;
-              break;
-      }
-    return pos;  
-  } 
   
   
  @Override
@@ -170,7 +99,7 @@ public class Tablero {
      
  String datos="";
  
-    int contador=1;
+    int contador=0;
     
      for (int y = 7; y >= 0; y--)
      {
@@ -178,18 +107,22 @@ public class Tablero {
          for (int x = 0; x <=7; x++) 
          
          {
-         
+             if ((tablero[x][y]==null)&&(x==7))
+             {contador++;}
              if ((tablero[x][y]==null)&&(x<7))
             {
              contador++ ;   
-                 
+             
             }
              else{
                  
-                 if (contador !=1){
+                 if (contador !=0){
                      
                      datos=datos+contador;
-                     contador=1;
+                     contador=0;
+                     if (x<7){
+                      datos=datos+tipoPieza(tablero[x][y]);}
+                     
                  }
                  else{
                      datos=datos+tipoPieza(tablero[x][y]);
@@ -198,7 +131,9 @@ public class Tablero {
              }
                         
          }
-       datos=datos+"/";       
+         if (y==0){}
+         else{
+       datos=datos+"/";   }    
      }
  
  return datos;
@@ -264,5 +199,23 @@ public class Tablero {
              
      
  }
+public List<Posicion> buscaPiezas(Pieza.TipoPieza tipo) {
+    
+    List<Posicion> lista=new ArrayList<Posicion>();
+    for (int y = 7; y >=0; y--) {
+        for (int x = 0; x <=7; x++) {
+            if (this.tablero[x][y]!=null){
+            if (this.tablero[x][y].tipo==tipo){
+                
+                lista.add(new Posicion(x,y));
+            }
+        } 
+        }
+        
+    }
+    
+    
+  return lista;  
+}
  
 }

@@ -6,14 +6,38 @@ package Ejercicio6;
  * @author Luis
  */
 public class Posicion {
-  public enum coorX{a,b,c,d,e,f,g,h}
+
  
-  private coorX coordenadaX;
+  private int coordenadaX;
   private int coordenadaY;
-  
-  
-  public Posicion(coorX X, int Y){
-      coordenadaX = X;
-      coordenadaY = Y;
+
+    public Posicion(int coordenadaX, int coordenadaY) {
+        this.coordenadaX = coordenadaX;
+        this.coordenadaY = coordenadaY;
+    }
+
+    public int getCoordenadaX() {
+        return coordenadaX;
+    }
+
+    public void setCoordenadaX(int coordenadaX) {
+        this.coordenadaX = coordenadaX;
+    }
+
+    public int getCoordenadaY() {
+        return coordenadaY;
+    }
+
+    public void setCoordenadaY(int coordenadaY) {
+        this.coordenadaY = coordenadaY;
+    }
+  @Override
+   public String toString(){
+      
+      
+      return "Esta posicion es "+this.coordenadaX+" X "+this.coordenadaY+" Y ";
   }
+  
+  
+
 }
