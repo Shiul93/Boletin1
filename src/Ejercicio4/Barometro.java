@@ -16,35 +16,35 @@ public class Barometro {
         if("Milibar".equals(unidad)) {
             this.presion=100*presion;          
         }
-        if ("Atmosfera".equals(unidad)){
+        if ("Atmósfera".equals(unidad)){
             this.presion=101325*presion;
         }
         
         
     }//Metodos que devuelven la presion de un barometro en diferentes unidades
-     public float getPascales(){
+     private float getPascales(){
        
         return this.presion;
     }
    
-    public float getMilibares(){
+    private float getMilibares(){
        
         return (this.presion/100);
     }
    
-    public float getAtmosfera(){
+    private float getAtmosfera(){
         return (this.presion/101325);
     }
     //Metodos que fijan la presion de un barometro en diferentes unidades
-    public void setPascales(float presion){
+    private void setPascales(float presion){
         this.presion=presion;
     }
    
-    public void setMilibares(float presion){
+    private void setMilibares(float presion){
         this.presion=presion*100;
     }
    
-    public void setAtmosferas(float presion){
+    private void setAtmosferas(float presion){
         this.presion=presion*101325;
     }
    @Override

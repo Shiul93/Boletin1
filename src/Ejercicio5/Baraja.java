@@ -20,7 +20,7 @@ public class Baraja {
  
        
    for( Palo p:Palo.values()){   
-      for (int i = 1; i <= 12; i++) {
+      for (int i = 1; i == 12; i++) {
        
         baraja.add(new Carta(i,p));
            
