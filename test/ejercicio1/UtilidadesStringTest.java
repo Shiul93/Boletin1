@@ -4,6 +4,7 @@
  */
 package ejercicio1;
 
+import Ejercicio1.UtilidadesString;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

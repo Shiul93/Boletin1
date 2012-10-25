@@ -28,9 +28,13 @@ public Persona(String dni,String nombre) //Metodo Constructor
     int contador=0;
     int numerodni=0;   
     char arraydni[]=dni.toCharArray();
+    if (dni.length()!=9){
+        
+    throw new IllegalArgumentException();    
+    }
     char letradni=arraydni[8];
     int exponente=7;
-
+    
     while (contador<8)
     {
        
@@ -39,7 +43,7 @@ public Persona(String dni,String nombre) //Metodo Constructor
        contador++;
     }
     
-    if (letradni != letraDNI(numerodni) )
+    if ((letradni != letraDNI(numerodni)) )
     {
         throw new IllegalArgumentException();
     }

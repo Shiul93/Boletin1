@@ -205,7 +205,7 @@ public List<Posicion> buscaPiezas(Pieza.TipoPieza tipo) {
     for (int y = 7; y >=0; y--) {
         for (int x = 0; x <=7; x++) {
             if (this.tablero[x][y]!=null){
-            if (this.tablero[x][y].tipo==tipo){
+                    if (this.tablero[x][y].tipo==tipo){
                 
                 lista.add(new Posicion(x,y));
             }
